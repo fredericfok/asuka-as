@@ -13,6 +13,7 @@
   "author": "P'unk Avenue",
   "license": "BSD",
   "dependencies": {
+    "apostrophe-blocks": "0.5.x",
     "apostrophe-blog-2": "0.5.x",
     "apostrophe-browserify": "0.5.x",
     "apostrophe-editor-2": "0.5.x",

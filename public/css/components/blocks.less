@@ -1,0 +1,68 @@
+.block-card
+{
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  text-align: left;
+
+  border-radius: 2px;
+  overflow: hidden;
+
+  @media screen and @narrow
+  {
+    background: @white;
+    margin-bottom: 2rem;
+    // border-bottom: 1px solid @gray;
+  }
+
+  .block-card-title-container
+  {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  .column-full {
+      width: 100%;
+  }
+  .column-left {
+      width: 48%;
+      margin: 0 1% 0 1%;
+      float: left;
+  }
+  .column-right {
+      width: 48%;
+      margin: 0 1% 0 1%;
+      float: right;
+  }
+
+  .block-clear
+  {
+    clear: both;
+
+  }
+
+  .block-card-title
+  {
+    margin-bottom: 0.5rem;
+    line-height: 1.2em;
+    color: @white;
+  }
+
+  .block-card-heading, h3
+  {
+    line-height: 1.2em;
+    color: @red;
+    margin-bottom: 0.5em;
+  }
+
+
+  .block-card-body
+  {
+    margin-top: 3rem;
+    color: @dark;
+  }
+
+}

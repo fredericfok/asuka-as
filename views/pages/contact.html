@@ -5,37 +5,15 @@
 {# be sure to call super() so that any pages inheriting this one will be appending classes, not overriding them. #}
 {% block bodyClass %}{{ super() }} default-page{% endblock %}
 
-{% block headerMessage %} ASUKA {% endblock %}
+{% block headerMessage %} Nous contacter {% endblock %}
 
 {% block upperClass %}bg-gold{% endblock %}
 
 {% block headerContent %}
   <div class="demo-pageheader">
-    <div class="column column--vertical-center width-50">
-      <h3 class="hide-desktop page-title">{{page.title}}</h3>
-      <ul class="subnav-items hide-desktop">
-        {% for child in page.children %}
-          <li class="subnav-item">
-            <a href="{{ child.url }}">{{ child.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-      {{ aposArea(page, 'pageheader', {
-        textOnly: true,
-        styles: [
-          { value: 'h3', label: 'Title'    },
-          { value: 'h4', label: 'Subtitle' }
-        ]
-      }) }}
-      {#<h2 class="pageheader-heading">The First Anaste.</h2>
-      <h4 class="pageheader-subheading">The garage is, in it's own way, a land.</h4>#}
-    </div>{#
-  #}<div class="column column--vertical-center width-50 align-right">
       <div class="demo-image-sticker">
         {{ aposSingleton(page, 'sticker', 'slideshow', { filter: false, limit: 1, aspectRatio: [1, 1] }) }}
-        <img class="demo-apos-shadow image-sticker" src="/images/Logo_2.jpg" alt="ASUKA">
-      </div>
-    </div>
+        <img class="demo-apos-shadow image-sticker" src="/images/Logo_2.jpg" alt="Apostrophe">
   </div>
 {% endblock %}
 

@@ -29,7 +29,7 @@ header { position: relative; }
 
   line-height: 1.25em;
   color: @white;
-
+/*
   &:hover
   {
     background-color: darken(@red, 10%);
@@ -43,7 +43,7 @@ header { position: relative; }
     top: 1.3rem;
 
     display: block;
-    content: "!";
+    content: "?";
     width: 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid @white;
@@ -67,6 +67,7 @@ header { position: relative; }
     font-weight: normal;
     text-decoration: underline;
   }
+  */
 }
 
 // collapsing the demo header
@@ -75,6 +76,7 @@ header { position: relative; }
   padding: 1rem 2.5rem;
   padding-right: 0;
 
+/*
   &:before
   {
     top: 1.3rem;
@@ -84,6 +86,7 @@ header { position: relative; }
     content: "!";
     .KarlaBold(@text-medium);
   }
+  */
   p { display: none; }
 
   @media screen and @narrow
@@ -103,8 +106,8 @@ header { position: relative; }
 .demo-nav
 {
   position: relative;
-  background-color: @white;
-
+  background-color: @red;
+/*
   &::after
   {
     position: absolute;
@@ -117,7 +120,7 @@ header { position: relative; }
 
     background-color: fade(@dark, 20%);
   }
-
+*/
   .nav-item
   {
     .inline-block(top);
@@ -128,7 +131,7 @@ header { position: relative; }
       .inline-block(top);
       padding: 0.075em 0;
       .KarlaBold(@text-small);
-      color: @red;
+      color: @white;
 
       &.active
       {
@@ -140,6 +143,6 @@ header { position: relative; }
 
 .top
 {
-  background-color: @heavy-gold;
+  background-color: @white;
   padding-bottom: 2rem;
 }

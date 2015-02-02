@@ -45,7 +45,10 @@ var site = require('apostrophe-site')({
     types: [
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
-      { name: 'blog', label: 'Blog' }
+      { name: 'blog', label: 'Blog' },
+      { name: 'contact', label: 'Contact'},
+      { name: 'equipe', label: 'equipe' },
+      { name: 'simplePage', label: 'Simple Page'}
     ]
   },
 
@@ -89,6 +92,18 @@ var site = require('apostrophe-site')({
         ]
       }
     },
+    'apostrophe-blocks': {
+      types: [
+        {
+          name: 'one',
+          label: 'One Column'
+        },
+        {
+          name: 'two',
+          label: 'Two Column'
+        }
+      ]
+    },
     'apostrophe-people': {
       addFields: [
         {
@@ -123,7 +138,16 @@ var site = require('apostrophe-site')({
   // while stylesheets contains the names of LESS files in /public/css
   assets: {
     stylesheets: ['site'],
-    scripts: ['_site-compiled']
+    scripts: ['vendor/adminbar/adminbar','_site-compiled']
+  },
+
+  sanitizeHtml: {
+    // Any options that can be passed to the sanitize-html
+    // module are valid here. Used to adjust the way we filter
+    // HTML saved in the rich text editor. You probably want
+    // to stick with our standard set of allowed tags and
+    // encourage users to respect your design rather than
+    // fighting it
   },
 
   afterInit: function(callback) {
@@ -138,5 +162,6 @@ var site = require('apostrophe-site')({
 
     callback(null);
   }
+
 
 });

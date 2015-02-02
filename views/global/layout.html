@@ -24,8 +24,11 @@
       <div class="inner demo-inner">
         <header>
           <div class="demo-header bg-red">
-            <h5>{% block headerMessage %}You are using the Apostrophe demo site.{% endblock %}</h5>
-            <p>Content in the demo can be edited in context by clicking on the pencil of each content type. Feel free to mess anything up, this page will automatically refresh every hour restoring the original content. If anything seems strange, someone else using the demo site has likely made a change. Check out <a href="http://apostrophenow.org" target="blank">apostrophenow.org</a> for more information.</p>
+            <h5>{% block headerMessage %}ASUKA, Une Association Franco - Japonaise {% endblock %}</h5>
+            <!--
+            <p>« ASUKA » est une association humanitaire franco-japonaise à but non lucratif. Elle réunit des femmes et des hommes de toutes nationalités autour d’actions consistant à développer les échanges culturels, accompagner et soutenir les populations en difficulté. « ASUKA » souhaite créer une grande toile d'amitié internationale pour réaliser cet objectif.
+<br> ASUKA（飛鳥）signifie l’oiseau qui vole. Il est libre et ainsi il peut choisir sa direction quelques soient les imprévus. </p>
+            -->
           </div>
           {{ nav(page, {classes: 'hide-mobile'}) }}
           <a href="#" class="off-canvas-trigger hide-desktop">
@@ -64,11 +67,14 @@
     <div class="inner">
       {% block footerContent %}
         <div class="inline-middle width-50">
-          Apostrophe is led by <a href="http://punkave.com">P'unk Avenue</a> in Philadelphia, PA.
+            © ASUKA 2012 (association Loi 1901, N° SIRET: 790 655 724 00017)
+            Interdiction formelle de copier le contenu du site, sans notre autorisation
+            (当ウエブサイトに掲載されている全ての内容の無許可コピー・転載・転用禁止)
+            This web site is currently being upgraded - If you would like to support, please contact Frederic Fok
         </div>{#
       #}<div class="inline-middle width-50 align-right">
-          <a class="inline-top footer-logo" href="http://punkave.com">
-            <img src="/images/demo_logo_punk.png" class="" alt="P'unk Avenue" width="150" height="32" />
+          <a class="inline-top footer-logo" href="http://asuka.herokuapp.com">
+            <img src="/images/Logo_4.png" class="" alt="ASUKA" />
           </a>
         </div>
       {% endblock %}

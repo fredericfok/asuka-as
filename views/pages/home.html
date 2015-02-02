@@ -6,44 +6,194 @@
 {% block breadcrumbs %}
 {% endblock %}
 
-{% block main %}
-  <div class="block content">
-    <div class="inner">
-      <div class="demo-pageheader">
-        <img class="demo-apos-lockup pageheader-logo" src="/images/demo_logo_apos_lockup.png" alt="Apostrophe">
-        {{ aposArea(page, 'homepageText', {
-          textOnly: true,
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' }
-          ]
-        }) }}
-      </div>
-    </div>
-    <div class="demo-workspaces-marquee"></div>
-    <div class="block content--bottom">
-      <div class="inner demo-pageheader">
-        {{ aposArea(page, 'main', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' },
-            { value: 'h5', label: 'Subtitle' }
-          ],
-          lockups: ['left', 'right']
-        }) }}
+{% block headerContent %}
+<div class="block">
+  <div class="inner">
+    <div class="demo-pageheader">
+      <div class="column column--vertical-center width-50">
+        <img src="/images/Logo_1.jpg" class="" alt="ASUKA" />
+        <p>« ASUKA » est une association humanitaire franco-japonaise à but non lucratif. Elle réunit des femmes et des hommes de toutes nationalités autour d’actions consistant à développer les échanges culturels, accompagner et soutenir les populations en difficulté. « ASUKA » souhaite créer une grande toile d'amitié internationale pour réaliser cet objectif.
+  <br> ASUKA（飛鳥）signifie l’oiseau qui vole. Il est libre et ainsi il peut choisir sa direction quelques soient les imprévus.
+        </p>
+      </div>{#
+    #}<div class="column column--vertical-center width-50 align-right">
+
+      <ul>
+        <li>
+            <div id="fb-root"></div>
+            <a href="{{facebook.fb_public_loc}}"><img src="{{facebook.fb_app_logo}}?type=normal"/></a><br/>
+            <div class="fb-like" data-href="{{facebook.url_ref}}" data-send="false" data-layout="button_count" data-width="400" data-show-faces="false"></div>
+            <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId={{facebook.fb_app_id}}";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+        </li>
+        <li>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_preferred_4"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f9b030d7caf5ae6"></script>
+            <!-- AddThis Button END -->
+        </li>
+      </ul>
+      <div class="demo-workspaces-marquee"></div>
+      <!--
+        <h2 class="pageheader-heading">ASUKA（飛鳥）</h2>
+        <h5 class="pageheader-subheading">" L'oiseau qui vole "</h5>
+        <div class="demo-workspaces-marquee"></div>
+      -->
       </div>
     </div>
   </div>
+</div>
+{% endblock %}
 
+{% block main %}
+
+  <div class="block">
+    <div class="inner">
+      <ul class="demo-blog-listings">
+        <li class="column width-100 demo-blog-listing">
+          <div class="column width-33 blog-listing-image">
+            <div class="blog-card-head">
+            {{ aposSingleton(page, 'HomeCafe', 'slideshow', { limit: 1, aspectRatio: [324, 162], noHeight: true }) }}
+            <span class="sticker-red sticker-red--overlap">Depuis 2014</span>
+          </div>
+        </div>{#
+        #}<div class="column width-66 blog-listing-info">
+          <h5 class="blog-listing-title">Le Café Asuka </h5>
+          <h6 class="blog-listing-author">(Radio Agora Nanterre)</h6>
+          <p class="blog-listing-excerpt">Nous avons réalisé des émissions radios. De nombreux sujets d'actualité y sont abordés: éducation, politesse, . Venez nous écouter ! </p>
+          <a href="/">Continuer la lecture</a>
+        </div>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="inner">
+      <ul class="demo-blog-listings">
+        <li class="column width-100 demo-blog-listing">
+          <div class="column width-33 blog-listing-image">
+            <div class="blog-card-head">
+            {{ aposSingleton(page, 'HomeCook', 'slideshow', { limit: 1, aspectRatio: [324, 162], noHeight: true }) }}
+            <span class="sticker-red sticker-red--overlap">Depuis 2014</span>
+          </div>
+        </div>{#
+        #}<div class="column width-66 blog-listing-info">
+          <h5 class="blog-listing-title"> Les ateliers de cuisine Japonaise </h5>
+          <h6 class="blog-listing-author"> </h6>
+          <p class="blog-listing-excerpt">Fan de cuisine ? nous partageons nos secrets culinaires: soupe miso, raviolis, soupes (Kazi-zouni, azuki-zouni, oyaki-zouni, ...), sushis, Sime-saba, et bien d'autres ! </p>
+          <a href="/">Continuer la lecture</a>
+        </div>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="inner">
+      <ul class="demo-blog-listings">
+        <li class="column width-100 demo-blog-listing">
+          <div class="column width-33 blog-listing-image">
+            <div class="blog-card-head">
+            {{ aposSingleton(page, 'HomeExpo', 'slideshow', { limit: 1, aspectRatio: [324, 162], noHeight: true }) }}
+            <span class="sticker-red sticker-red--overlap">Depuis 2014</span>
+          </div>
+        </div>{#
+        #}<div class="column width-66 blog-listing-info">
+          <h5 class="blog-listing-title"> L'exposition itinérante des enfants de Fukushima </h5>
+          <h6 class="blog-listing-author"> </h6>
+          <p class="blog-listing-excerpt">Venez découvrir nos expositions</p>
+          <a href="/">Continuer la lecture</a>
+        </div>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="inner demo-pageheader">
+    {{ aposArea(page, 'mainPetition', {
+      controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+      styles: [
+        { value: 'p', label: 'Text' },
+        { value: 'h3', label: 'Title' },
+        { value: 'h5', label: 'Subtitle' }
+      ],
+      lockups: ['left', 'right']
+    }) }}
+  </div>
+
+  <div class="block content">
+    <div class="inner">
+
+          <!--
+          <div class="inner">
+            <div class="demo-pageheader">
+              <img class="demo-apos-lockup pageheader-logo" src="/images/Logo_1.jpg" alt="ASUKA">
+              {{ aposArea(page, 'AsukaHomePageText', {
+                textOnly: true,
+                styles: [
+                  { value: 'p', label: 'Text' },
+                  { value: 'h3', label: 'Title' }
+                ]
+              }) }}
+
+            </div>
+          </div>
+        -->
+    </div>
+  </div>
+
+<!--
   <div class="block bg-gray block--5">
     <div class="inner">
       {{ aposSingleton(page, 'blogWidget', 'blog', { limit: 3 }) }}
     </div>
   </div>
 
+<div class="block bg-gray block--5">
+    <div class="inner">
+      {{ aposSingleton(page, 'slideshow', 'slideshow', {
+            size: 'one-third',
+            userOptions: {
+                orientation: {
+                  choices: [
+                    {
+                      label: 'Portrait',
+                      name: 'portrait',
+                      css: 'apos-portrait',
+                      aspectRatio: [ 1, 1.66 ]
+                    },
+                    {
+                      label: 'Landscape',
+                      name: 'landscape',
+                      css: 'apos-landscape',
+                      aspectRatio: [ 1.66, 1 ]
+                    }
+                  ]
+                }
+            },
+            limit: 3 })
+        }}
+    </div>
+  </div>
+-->
+
   <div class="block content--bottom">
     <div class="inner demo-pageheader">
+      <h4 class="pageheader-heading">Pétition</h4>
       {{ aposArea(page, 'mainBottom', {
         controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
         styles: [
@@ -53,6 +203,27 @@
         ],
         lockups: ['left', 'right']
       }) }}
+      <div>
+            <h4 class="pageheader-subheading">Soutenez nos projets par vos dons </h4>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="assuka.11032011@gmail.com">
+            <input type="hidden" name="lc" value="FR">
+            <input type="hidden" name="item_name" value="ASUKA">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+      </div>
     </div>
   </div>
+
+  <div class="block block--5">
+    <div class="inner">
+      {{ aposSingleton(page, 'twitter', 'twitter', { limit: 3 }) }}
+    </div>
+  </div>
+
 {% endblock %}
